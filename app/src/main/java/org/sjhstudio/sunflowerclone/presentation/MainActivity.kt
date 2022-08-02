@@ -1,7 +1,8 @@
-package org.sjhstudio.sunflowerclone
+package org.sjhstudio.sunflowerclone.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import org.sjhstudio.sunflowerclone.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
