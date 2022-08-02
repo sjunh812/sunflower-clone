@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "SunFlowerClone"
-include ':app'
+include(":app")
