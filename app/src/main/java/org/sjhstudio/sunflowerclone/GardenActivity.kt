@@ -1,12 +1,11 @@
-package org.sjhstudio.sunflowerclone.presentation
+package org.sjhstudio.sunflowerclone
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import org.sjhstudio.sunflowerclone.R
 
-class MainActivity : AppCompatActivity() {
+class GardenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_garden)
     }
 }
