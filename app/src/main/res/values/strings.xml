@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">SunFlowerClone</string>
+    <string name="app_name">Sunflower</string>
+    <string name="menu_item_share_plant">공유</string>
+    <string name="description_plant_detail_image_content">식물 이미지</string>
+    <string name="watering_needs_prefix">물주기</string>
 </resources>

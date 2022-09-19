@@ -1,3 +1,5 @@
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
 plugins {
     id("com.android.application")
     kotlin("android")
@@ -14,8 +16,9 @@ android {
         targetSdk = AppConfig.TARGET_SDK
         versionCode = AppConfig.VERSION_CODE
         versionName = AppConfig.VERSION_NAME
-
         testInstrumentationRunner = AppConfig.TEST_INSTRUMENTATION_RUNNER
+
+        buildConfigField("String", "UNSPLASH_ACCESS_KEY", getApiKey("UNSPLASH_ACCESS_KEY"))
     }
 
     buildTypes {
@@ -40,6 +43,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":domain"))
+
     implementation(Library.AndroidX.CORE_KTX)
     implementation(Library.AndroidX.APPCOMPAT)
     implementation(Library.AndroidX.MATERIAL)
@@ -61,3 +66,5 @@ dependencies {
     implementation(Library.Network.OKHTTP)
     implementation(Library.Network.LOGGING_INTERCEPTOR)
 }
+
+fun getApiKey(propertyKey: String): String = gradleLocalProperties(rootDir).getProperty(propertyKey)

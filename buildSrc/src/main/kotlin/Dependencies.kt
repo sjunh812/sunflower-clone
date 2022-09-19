@@ -9,7 +9,7 @@ object Version {
 
     const val JUNIT = "4.13.2"
 
-    const val Hilt = "2.42"
+    const val HILT = "2.42"
 
     const val RETROFIT = "2.9.0"
     const val MOSHI = "1.9.3"
@@ -34,8 +34,10 @@ object Library {
     }
 
     object Hilt {
-        const val HILT = "com.google.dagger:hilt-android:${Version.Hilt}"
-        const val HILT_COMPILER = "com.google.dagger:hilt-android-compiler:${Version.Hilt}"
+        const val HILT = "com.google.dagger:hilt-android:${Version.HILT}"
+        const val HILT_ANDROID_COMPILER = "com.google.dagger:hilt-android-compiler:${Version.HILT}"
+        const val HILT_CORE = "com.google.dagger:hilt-core:${Version.HILT}"
+        const val HILT_COMPILER = "com.google.dagger:hilt-compiler:${Version.HILT}"
     }
 
     object Network {
