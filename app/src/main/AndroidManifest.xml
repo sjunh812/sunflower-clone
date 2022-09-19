@@ -14,10 +14,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SunFlowerClone"
+        android:theme="@style/Theme.SunflowerClone"
         tools:targetApi="31">
         <activity
-            android:name=".GardenActivity"
+            android:name=".presentation.ui.GardenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

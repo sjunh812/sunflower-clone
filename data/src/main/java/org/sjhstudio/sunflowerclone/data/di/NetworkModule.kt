@@ -1,4 +1,4 @@
-package org.sjhstudio.sunflowerclone.presentation.di
+package org.sjhstudio.sunflowerclone.data.di
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -10,28 +10,22 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
-import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
-    private const val CONNECT_TIME_OUT = 20000L
-    private const val READ_TIME_OUT = 20000L
-    private const val WRITE_TIME_OUT = 20000L
-    private const val BASE_URL = "https://api.unsplash.com"
+
+    private const val BASE_URL = "https://api.unsplash.com/"
 
     @Singleton
     @Provides
     fun provideOkHttpClient(): OkHttpClient {
-        val loggingInterceptor = HttpLoggingInterceptor().apply {
-            level = HttpLoggingInterceptor.Level.BODY
+        val logger = HttpLoggingInterceptor().apply {
+            level = HttpLoggingInterceptor.Level.BASIC
         }
         return OkHttpClient.Builder()
-            .addInterceptor(loggingInterceptor)
-            .connectTimeout(CONNECT_TIME_OUT, TimeUnit.SECONDS)
-            .readTimeout(READ_TIME_OUT, TimeUnit.SECONDS)
-            .writeTimeout(WRITE_TIME_OUT, TimeUnit.SECONDS)
+            .addInterceptor(logger)
             .build()
     }
 

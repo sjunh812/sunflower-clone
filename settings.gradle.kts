@@ -14,3 +14,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "SunFlowerClone"
 include(":app")
+include(":data")
+include(":domain")
