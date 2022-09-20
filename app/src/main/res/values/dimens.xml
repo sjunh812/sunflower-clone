@@ -3,14 +3,20 @@
     <dimen name="margin_normal">16dp</dimen>
     <dimen name="margin_small">8dp</dimen>
     <dimen name="margin_fab">16dp</dimen>
+    <dimen name="margin_card_side">12dp</dimen>
+    <dimen name="margin_card_bottom">26dp</dimen>
+    <dimen name="margin_gallery_header">72dp</dimen>
 
     <!-- Padding on bottom of a screen a so that the FAB won't overlap scrolled text -->
     <dimen name="padding_bottom_fab">72dp</dimen>
 
-    <!-- Elevation for Plant Detail toolbar - used to convert to pixels when hiding/showing -->
-    <dimen name="elevation_toolbar">5dp</dimen>
-
-    <!-- Plant Detail -->
     <dimen name="height_plant_detail_app_bar">278dp</dimen>
     <dimen name="min_height_plant_description">555dp</dimen>
+    <dimen name="height_plant_item_image">95dp</dimen>
+
+    <!-- Elevation for Plant Detail toolbar - used to convert to pixels when hiding/showing -->
+    <dimen name="elevation_toolbar">5dp</dimen>
+    <dimen name="elevation_card">2dp</dimen>
+
+    <dimen name="corner_radius_card">12dp</dimen>
 </resources>
