@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">Sunflower</string>
     <string name="menu_item_share_plant">공유</string>
-    <string name="description_plant_detail_image_content">식물 이미지</string>
     <string name="watering_needs_prefix">물주기</string>
+
+    <string name="title_my_garden">내 정원</string>
+    <string name="title_plant_list">식물 목록</string>
+    <string name="title_plant_details">식물 상세</string>
+    <string name="title_gallery">사진</string>
+
+    <string name="description_plant_detail_image_content">식물 이미지</string>
+    <string name="description_plant_item_image">식물 사진</string>
 </resources>
