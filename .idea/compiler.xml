@@ -6,7 +6,7 @@
       <module name="sunflower-clone.buildSrc.main" target="11" />
       <module name="sunflower-clone.buildSrc.test" target="11" />
       <module name="SunFlowerClone.app" target="11" />
-      <module name="SunFlowerClone.data" target="1.8" />
+      <module name="SunFlowerClone.data" target="11" />
       <module name="SunFlowerClone.data.main" target="1.8" />
       <module name="SunFlowerClone.data.test" target="1.8" />
     </bytecodeTargetLevel>

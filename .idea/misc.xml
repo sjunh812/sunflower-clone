@@ -7,6 +7,7 @@
         <entry key="..\:/Users/sjunh/Desktop/android-project/sunflower-clone/app/src/main/res/drawable/ic_detail_back.xml" value="0.1925" />
         <entry key="..\:/Users/sjunh/Desktop/android-project/sunflower-clone/app/src/main/res/drawable/ic_detail_back_no_circle.xml" value="0.1925" />
         <entry key="..\:/Users/sjunh/Desktop/android-project/sunflower-clone/app/src/main/res/drawable/ic_detail_share.xml" value="0.1925" />
+        <entry key="..\:/Users/sjunh/Desktop/android-project/sunflower-clone/app/src/main/res/drawable/ic_filter_list_24dp.xml" value="0.1935" />
         <entry key="..\:/Users/sjunh/Desktop/android-project/sunflower-clone/app/src/main/res/drawable/ic_my_garden_active.xml" value="0.1925" />
         <entry key="..\:/Users/sjunh/Desktop/android-project/sunflower-clone/app/src/main/res/drawable/ic_my_garden_inactive.xml" value="0.1925" />
         <entry key="..\:/Users/sjunh/Desktop/android-project/sunflower-clone/app/src/main/res/drawable/ic_plant_list_active.xml" value="0.1925" />
@@ -17,11 +18,15 @@
         <entry key="..\:/Users/sjunh/Desktop/android-project/sunflower-clone/app/src/main/res/drawable/tab_selector_plant_list.xml" value="0.1925" />
         <entry key="..\:/Users/sjunh/Desktop/android-project/sunflower-clone/app/src/main/res/layout/activity_garden.xml" value="0.3138888888888889" />
         <entry key="..\:/Users/sjunh/Desktop/android-project/sunflower-clone/app/src/main/res/layout/fragment_gallery.xml" value="0.3609375" />
+        <entry key="..\:/Users/sjunh/Desktop/android-project/sunflower-clone/app/src/main/res/layout/fragment_garden.xml" value="0.3609375" />
         <entry key="..\:/Users/sjunh/Desktop/android-project/sunflower-clone/app/src/main/res/layout/fragment_plant_detail.xml" value="0.3138888888888889" />
         <entry key="..\:/Users/sjunh/Desktop/android-project/sunflower-clone/app/src/main/res/layout/fragment_plant_list.xml" value="0.3619791666666667" />
         <entry key="..\:/Users/sjunh/Desktop/android-project/sunflower-clone/app/src/main/res/layout/fragment_view_pager.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/sjunh/Desktop/android-project/sunflower-clone/app/src/main/res/layout/item_garden_planting.xml" value="0.3609375" />
         <entry key="..\:/Users/sjunh/Desktop/android-project/sunflower-clone/app/src/main/res/layout/item_photo.xml" value="0.3609375" />
+        <entry key="..\:/Users/sjunh/Desktop/android-project/sunflower-clone/app/src/main/res/layout/item_plant.xml" value="0.3609375" />
         <entry key="..\:/Users/sjunh/Desktop/android-project/sunflower-clone/app/src/main/res/menu/menu_plant_detail.xml" value="0.71875" />
+        <entry key="..\:/Users/sjunh/Desktop/android-project/sunflower-clone/app/src/main/res/menu/menu_plant_list.xml" value="0.3609375" />
       </map>
     </option>
   </component>
