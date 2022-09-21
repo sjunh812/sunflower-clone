@@ -44,6 +44,7 @@ android {
 
 dependencies {
     implementation(project(":domain"))
+    implementation(project(":data"))
 
     implementation(Library.AndroidX.CORE_KTX)
     implementation(Library.AndroidX.APPCOMPAT)
@@ -58,13 +59,18 @@ dependencies {
     testImplementation(Library.JUNIT.JUNIT)
 
     implementation(Library.Hilt.HILT)
+    implementation(Library.Hilt.HILT_WORK)
     kapt(Library.Hilt.HILT_COMPILER)
+    kapt(Library.Hilt.HILT_WORK_COMPILER)
 
     implementation(Library.Network.RETROFIT)
     implementation(Library.Network.MOSHI)
     implementation(Library.Network.MOSHI_CONVERTER)
     implementation(Library.Network.OKHTTP)
     implementation(Library.Network.LOGGING_INTERCEPTOR)
+
+    implementation(Library.Glide.GLIDE)
+    kapt(Library.Glide.GLIDE_COMPILER)
 }
 
 fun getApiKey(propertyKey: String): String = gradleLocalProperties(rootDir).getProperty(propertyKey)

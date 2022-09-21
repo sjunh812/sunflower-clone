@@ -6,6 +6,7 @@
     <dimen name="margin_card_side">12dp</dimen>
     <dimen name="margin_card_bottom">26dp</dimen>
     <dimen name="margin_gallery_header">72dp</dimen>
+    <dimen name="margin_header">24dp</dimen>
 
     <!-- Padding on bottom of a screen a so that the FAB won't overlap scrolled text -->
     <dimen name="padding_bottom_fab">72dp</dimen>
@@ -19,4 +20,5 @@
     <dimen name="elevation_card">2dp</dimen>
 
     <dimen name="corner_radius_card">12dp</dimen>
+    <dimen name="corner_radius_button">12dp</dimen>
 </resources>
