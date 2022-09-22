@@ -49,10 +49,10 @@ object Library {
 
     object Hilt {
         const val HILT = "com.google.dagger:hilt-android:${Version.HILT}"
-        const val HILT_ANDROID_COMPILER = "com.google.dagger:hilt-android-compiler:${Version.HILT}"
         const val HILT_CORE = "com.google.dagger:hilt-core:${Version.HILT}"
-        const val HILT_COMPILER = "com.google.dagger:hilt-compiler:${Version.HILT}"
         const val HILT_WORK = "androidx.hilt:hilt-work:${Version.HILT_WORK}"
+        const val HILT_COMPILER = "com.google.dagger:hilt-compiler:${Version.HILT}"
+        const val HILT_ANDROID_COMPILER = "com.google.dagger:hilt-android-compiler:${Version.HILT}"
         const val HILT_WORK_COMPILER = "androidx.hilt:hilt-compiler:${Version.HILT_WORK}"
     }
 
