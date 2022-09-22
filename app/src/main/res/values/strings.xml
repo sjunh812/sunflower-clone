@@ -4,6 +4,7 @@
     <string name="menu_filter_by_grow_zone">필터</string>
     <string name="watering_needs_prefix">물주기</string>
 
+    <string name="label_garden_empty">정원이 비어있습니다 :(</string>
     <string name="label_add_plant_button">식물 추가</string>
     <string name="label_plant_date_header">심은날</string>
     <string name="label_watered_date_header">물준날</string>

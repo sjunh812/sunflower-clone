@@ -15,7 +15,6 @@ import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.withContext
 import org.sjhstudio.sunflowerclone.data.local.AppDatabase
 import org.sjhstudio.sunflowerclone.data.local.model.PlantEntity
-import org.sjhstudio.sunflowerclone.domain.model.Plant
 import javax.inject.Inject
 
 @HiltWorker
@@ -40,13 +39,9 @@ class SeedDatabaseWorker @AssistedInject constructor(
                 val json = applicationContext.assets.open(filename).bufferedReader().use {
                     it.readText()
                 }
-                val plantList = adapter.fromJson(json)
-                if (plantList != null) {
-                    database.plantDao().insertAll(plantList)
-                    Result.success()
-                } else {
-                    Result.failure()
-                }
+                val plantList = adapter.fromJson(json) ?: return@withContext Result.failure()
+                database.plantDao().insertAll(plantList)
+                Result.success()
             } else {
                 Log.e(TAG, "Error seeding database - no valid filename")
                 Result.failure()
