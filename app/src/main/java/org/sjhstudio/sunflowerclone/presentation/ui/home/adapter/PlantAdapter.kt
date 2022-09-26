@@ -1,13 +1,14 @@
 package org.sjhstudio.sunflowerclone.presentation.ui.home.adapter
 
-
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import org.sjhstudio.sunflowerclone.databinding.ItemPlantBinding
 import org.sjhstudio.sunflowerclone.domain.model.Plant
+import org.sjhstudio.sunflowerclone.presentation.ui.home.view.HomeViewPagerFragmentDirections
 
 class PlantAdapter : ListAdapter<Plant, RecyclerView.ViewHolder>(PlantDiffCallback()) {
 
@@ -24,14 +25,26 @@ class PlantAdapter : ListAdapter<Plant, RecyclerView.ViewHolder>(PlantDiffCallba
     class PlantViewHolder(private val binding: ItemPlantBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
+        init {
+            with(binding) {
+                setClickListener {
+                    plant?.let { plant ->
+                        navigateToPlant(plant)
+                    }
+                }
+            }
+        }
+
         fun bind(plant: Plant) {
             with(binding) {
                 this.plant = plant
             }
         }
 
-        private fun navigatePlant(plant: Plant) {
-
+        private fun navigateToPlant(plant: Plant) {
+            val direction =
+                HomeViewPagerFragmentDirections.actionViewPagerFragmentToPlantDetailFragment(plant.plantId)
+            itemView.findNavController().navigate(direction)
         }
     }
 }

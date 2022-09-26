@@ -6,6 +6,10 @@
     <data>
 
         <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
             name="plant"
             type="org.sjhstudio.sunflowerclone.domain.model.Plant" />
     </data>
@@ -15,6 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/margin_card_side"
         android:layout_marginBottom="@dimen/margin_card_bottom"
+        android:onClick="@{clickListener}"
         app:cardElevation="@dimen/elevation_card"
         app:cardPreventCornerOverlap="false"
         app:shapeAppearanceOverlay="@style/ShapeAppearance.Sunflower.Card">

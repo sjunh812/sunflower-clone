@@ -5,6 +5,6 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class UnsplashSearchResponse(
-    @field:Json(name = "totalPages") val totalPages: Int,
-    @field:Json(name = "results") val results: List<UnsplashPhoto>
+    @Json(name = "totalPages") val totalPages: Int,
+    @Json(name = "results") val results: List<UnsplashPhoto>
 )

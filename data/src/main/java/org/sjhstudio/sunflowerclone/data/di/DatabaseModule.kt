@@ -30,7 +30,6 @@ internal object DatabaseModule {
         @ApplicationContext context: Context
     ): AppDatabase {
         synchronized(this) {
-            println("xxx ")
             return Room.databaseBuilder(
                 context,
                 AppDatabase::class.java,

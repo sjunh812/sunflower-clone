@@ -5,8 +5,8 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class UnsplashUser(
-    @field:Json(name = "name") val name: String,
-    @field:Json(name = "username") val username: String
+    @Json(name = "name") val name: String,
+    @Json(name = "username") val username: String
 ) {
     val attributeUrl: String
         get() {

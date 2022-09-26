@@ -14,4 +14,8 @@ data class Plant(
         since > lastWateringDate.apply { add(Calendar.DAY_OF_YEAR, wateringInterval) }
 
     override fun toString() = name
+
+    companion object {
+        val EMPTY = Plant("", "", "", -1)
+    }
 }
