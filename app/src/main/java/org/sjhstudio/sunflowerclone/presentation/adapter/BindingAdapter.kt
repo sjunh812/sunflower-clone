@@ -1,4 +1,4 @@
-package org.sjhstudio.sunflowerclone.presentation.util
+package org.sjhstudio.sunflowerclone.presentation.adapter
 
 import android.view.View
 import android.widget.ImageView

@@ -21,7 +21,7 @@
 
     <fragment
         android:id="@+id/plant_detail_fragment"
-        android:name="org.sjhstudio.sunflowerclone.presentation.ui.PlantDetailFragment"
+        android:name="org.sjhstudio.sunflowerclone.presentation.ui.detail.view.PlantDetailFragment"
         tools:layout="@layout/fragment_plant_detail">
 
         <action
@@ -31,10 +31,19 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+
+        <argument
+            android:name="plantId"
+            app:argType="string" />
     </fragment>
 
     <fragment
         android:id="@+id/gallery_fragment"
         android:name="org.sjhstudio.sunflowerclone.presentation.ui.GalleryFragment"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_gallery">
+
+        <argument
+            android:name="plantName"
+            app:argType="string" />
+    </fragment>
 </navigation>
