@@ -10,5 +10,5 @@ class GardenPlantingListViewModel @Inject constructor(
     private val gardenPlantingRepository: GardenPlantingRepository
 ) : ViewModel() {
 
-
+    val plantAndGardenPlantings = gardenPlantingRepository.getPlantedGardens()
 }
