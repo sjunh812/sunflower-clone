@@ -6,6 +6,7 @@ object Version {
     const val CONSTRAINT_LAYOUT = "2.1.4"
     const val NAVIGATION = "2.5.2"
     const val WORK = "2.7.1"
+    const val PAGING = "3.1.1"
     const val TEST_JUNIT = "1.1.3"
     const val ESPRESSO = "3.4.0"
 
@@ -40,6 +41,8 @@ object Library {
         const val NAVIGATION_UI_KTX = "androidx.navigation:navigation-ui-ktx:${Version.NAVIGATION}"
         const val NAVIGATION_SAFE_ARGS = "androidx.navigation:navigation-safe-args-gradle-plugin:${Version.NAVIGATION}"
         const val WORK = "androidx.work:work-runtime-ktx:${Version.WORK}"
+        const val PAGING = "androidx.paging:paging-runtime-ktx:${Version.PAGING}"
+        const val PAGING_COMMON = "androidx.paging:paging-common-ktx:${Version.PAGING}"
         const val TEST_JUNIT = "androidx.test.ext:junit:${Version.TEST_JUNIT}"
         const val ESPRESSO = "androidx.test.espresso:espresso-core:${Version.ESPRESSO}"
     }

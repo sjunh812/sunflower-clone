@@ -4,10 +4,12 @@ plugins {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_7
-    targetCompatibility = JavaVersion.VERSION_1_7
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 dependencies {
+    implementation(Library.AndroidX.PAGING_COMMON)
+
     implementation(Library.Coroutine.COROUTINE_CORE)
 }

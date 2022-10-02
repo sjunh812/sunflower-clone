@@ -1,13 +1,14 @@
 package org.sjhstudio.sunflowerclone.presentation.ui.home.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import org.sjhstudio.sunflowerclone.databinding.ItemGardenPlantingBinding
 import org.sjhstudio.sunflowerclone.domain.model.PlantAndGardenPlantings
+import org.sjhstudio.sunflowerclone.presentation.ui.home.view.HomeViewPagerFragmentDirections
 import org.sjhstudio.sunflowerclone.presentation.ui.home.viewmodel.PlantAndGardenPlantingsViewModel
 
 class GardenPlantingAdapter :
@@ -31,7 +32,9 @@ class GardenPlantingAdapter :
         init {
             with(binding) {
                 setClickListener {
-
+                    viewModel?.plantId?.let { plantId ->
+                        navigateToPlant(plantId)
+                    }
                 }
             }
         }
@@ -43,8 +46,10 @@ class GardenPlantingAdapter :
             }
         }
 
-        fun navigateToPlant(plantId: String, view: View) {
-
+        private fun navigateToPlant(plantId: String) {
+            val direction =
+                HomeViewPagerFragmentDirections.actionViewPagerFragmentToPlantDetailFragment(plantId)
+            itemView.findNavController().navigate(direction)
         }
     }
 }

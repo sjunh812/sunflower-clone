@@ -39,7 +39,7 @@
 
     <fragment
         android:id="@+id/gallery_fragment"
-        android:name="org.sjhstudio.sunflowerclone.presentation.ui.GalleryFragment"
+        android:name="org.sjhstudio.sunflowerclone.presentation.ui.gallery.view.GalleryFragment"
         tools:layout="@layout/fragment_gallery">
 
         <argument

@@ -3,11 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="photo"
+            type="org.sjhstudio.sunflowerclone.domain.model.UnsplashPhoto" />
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
     <org.sjhstudio.sunflowerclone.presentation.ui.common.MaskedCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/margin_card_side"
         android:layout_marginBottom="@dimen/margin_card_bottom"
+        android:onClick="@{clickListener}"
         app:cardElevation="@dimen/elevation_card"
         app:cardPreventCornerOverlap="false"
         app:shapeAppearanceOverlay="@style/ShapeAppearance.Sunflower.Card">
@@ -22,6 +34,7 @@
                 android:layout_height="@dimen/height_plant_item_image"
                 android:contentDescription="@string/description_plant_item_image"
                 android:scaleType="centerCrop"
+                app:imageFromUrl="@{photo.url}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -32,6 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/margin_normal"
                 android:gravity="center_horizontal"
+                android:text="@{photo.user.name}"
                 android:textAppearance="?attr/textAppearanceListItem"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

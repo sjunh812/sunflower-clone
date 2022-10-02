@@ -32,6 +32,7 @@ class PlantDetailFragment :
 
     private fun bind() {
         with(binding) {
+            fragment = this@PlantDetailFragment
             viewModel = plantDetailViewModel
             callback = object : Callback {
                 override fun add(plant: Plant?) {
@@ -84,9 +85,10 @@ class PlantDetailFragment :
 
     private fun createShareIntent() {
         val shareText =
-            plantDetailViewModel.plant.value.takeIf { plant -> plant != Plant.EMPTY }?.let { plant ->
-                getString(R.string.label_share_text_plant, plant.name)
-            } ?: ""
+            plantDetailViewModel.plant.value.takeIf { plant -> plant != Plant.EMPTY }
+                ?.let { plant ->
+                    getString(R.string.label_share_text_plant, plant.name)
+                } ?: ""
         val shareIntent = ShareCompat.IntentBuilder(requireActivity())
             .setText(shareText)
             .setType("text/plain")

@@ -41,7 +41,6 @@ class GardenFragment : BaseFragment<FragmentGardenBinding>(R.layout.fragment_gar
         with(viewModel) {
             lifecycleScope.launchWhenStarted {
                 plantAndGardenPlantings.collectLatest { result ->
-                    Log.e("debug", "xxx result: $result")
                     binding.hasPlantings = result.isNotEmpty()
                     adapter.submitList(result) {
                         // At this point, the content should be drawn

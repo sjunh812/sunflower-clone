@@ -3,9 +3,8 @@ package org.sjhstudio.sunflowerclone.data
 import org.sjhstudio.sunflowerclone.data.local.model.GardenPlantingEntity
 import org.sjhstudio.sunflowerclone.data.local.model.PlantAndGardenPlantingsEntity
 import org.sjhstudio.sunflowerclone.data.local.model.PlantEntity
-import org.sjhstudio.sunflowerclone.domain.model.GardenPlanting
-import org.sjhstudio.sunflowerclone.domain.model.Plant
-import org.sjhstudio.sunflowerclone.domain.model.PlantAndGardenPlantings
+import org.sjhstudio.sunflowerclone.data.remote.model.UnsplashPhotoDto
+import org.sjhstudio.sunflowerclone.domain.model.*
 
 fun mapperToPlants(plants: List<PlantEntity>): List<Plant> =
     plants.toList().map {
@@ -31,3 +30,13 @@ fun mapperToPlantAndGardenPlantings(plantAndGardenPlantings: List<PlantAndGarden
             gardenPlantings = mapperToGardenPlantings(it.gardenPlantingEntities)
         )
     }
+
+fun mapperToUnsplashPhotos(unsplashPhotoDtoList: List<UnsplashPhotoDto>): List<UnsplashPhoto> {
+    return unsplashPhotoDtoList.map { dto ->
+        UnsplashPhoto(
+            id = dto.id,
+            url = dto.urls.small,
+            user = UnsplashUser(name = dto.user.name, username = dto.user.username)
+        )
+    }
+}
